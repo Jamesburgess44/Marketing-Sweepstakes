@@ -14,4 +14,10 @@ class Contestant:
         """, I want to use the observer design pattern to notify all users of the winning contestant,
         with the winner of the sweepstakes receiving a different message specifically congratulating
         them on being the winner. This notification will be triggered within the sweepstakes pick_winner method. """
-        pass
+        is_winner = False
+        if is_winner == False:
+            pass
+        else:
+            pass
+        """if false needs to send (not a winner) message
+        if ture needs to send congrats message"""
