@@ -1,2 +1,2 @@
 class MarketingFirm:
-    pass
+    def __init__(self):
