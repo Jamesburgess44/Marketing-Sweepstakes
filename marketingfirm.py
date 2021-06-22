@@ -1,6 +1,10 @@
+import userinterface
+
 class MarketingFirm:
-    def __init__(self):
-        pass
+    def __init__(self, name):
+        self.marketing_firm_name = name
+
+
 
     def create_sweepstakes(self):
         pass
@@ -15,4 +19,5 @@ class MarketingFirm:
     def menu(self):
         """I want the marketing firm menu to provide a façade interface for selecting a sweepstakes,
         creating a sweepstakes, changing the marketing firm name, and exiting the application"""
+
         pass
