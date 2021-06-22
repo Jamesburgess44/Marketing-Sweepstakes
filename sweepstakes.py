@@ -14,4 +14,6 @@ class Sweepstakes:
         pass
 
     def menu(self):
+        """, I want the sweepstakes menu to provide a façade interface for viewing contestants, registering a new contestant,
+         picking a winner, and exiting the sweepstakes menu"""
         pass
