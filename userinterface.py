@@ -1,4 +1,7 @@
 class UserInterface:
+    """I want to create a user interface for any information the application would need
+    to get or display for the user. One example would be to create a method called
+    “get_user_input_string” that takes in a prompt and returns the user’s entered input"""
     @staticmethod
     def display_message(message):
         pass
