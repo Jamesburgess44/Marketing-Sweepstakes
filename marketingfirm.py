@@ -16,8 +16,7 @@ class MarketingFirm:
         pass
 
     def change_marketing_firm_name(self):
-        self.name()
-        pass
+        self.name = UserInterface.get_user_input_string("Enter your firm name")
 
     def menu(self):
         UserInterface.display_marketing_firm_menu_options()
