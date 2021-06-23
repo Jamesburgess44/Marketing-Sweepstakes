@@ -37,7 +37,7 @@ class UserInterface:
 
     @staticmethod
     def display_sweepstakes_selection_menu(all_sweepstakes):
-        i = 1 
+        i = 1
         print("Which sweepstake would you like to interact with?:")
         for sweepstake in all_sweepstakes:
             print(f"{i}: {sweepstake.name}")
@@ -59,4 +59,19 @@ class UserInterface:
 
     @staticmethod
     def display_sweepstakes_menu_options(sweepstakes):
-        pass
+        print("Enter -1- to register a contestant.")
+        print("Enter -2- to pick a winner. ")
+        print("Enter -3- to view contestant. ")
+        user_selection = int(input("Enter number here:"))
+        if user_selection == 1:
+            Sweepstakes.register_contestant()
+        elif user_selection == 2:
+            Sweepstakes.pick_winner()
+        elif user_selection == 3:
+            Sweepstakes.view_contestant()
+        else:
+            pass
+
+    @staticmethod
+    def welcome_to_app():
+        print("welcome")
