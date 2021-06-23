@@ -46,7 +46,7 @@ class UserInterface:
         print("Enter -1- to create a sweepstakes.")
         print("Enter -2- to change the marketing firm name. ")
         print("Enter -3- to select a sweepstakes. ")
-        user_selection = int(input("Enter number here:"))
+        user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
         if user_selection == 1:
             MarketingFirm.create_sweepstakes()
         elif user_selection == 2:
