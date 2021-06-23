@@ -2,12 +2,14 @@ from userinterface import UserInterface
 from sweepstakes import Sweepstakes
 
 class MarketingFirm:
+
     def __init__(self):
-        self.name = UserInterface.get_user_input_string("Enter the name of your marketing firm")
-        self.sweepstakes_dictionary = []
+        self.name = "name"
+        self.sweepstakes_dictionary = ["Publishers Clearing house", "Other sweepstakes"]
 
     def create_sweepstakes(self):
-        pass
+        new_sweepstakes = UserInterface.get_user_input_string("Enter name of new sweepstakes")
+        self.sweepstakes_dictionary.append(new_sweepstakes)
 
     def select_sweepstakes(self):
         """once I select a sweepstakes from the select_sweepstakes method, I should be taken to that sweepstakes menu"""
@@ -18,16 +20,14 @@ class MarketingFirm:
         pass
 
     def menu(self):
-        will_this_work = True
-        while will_this_work:
-            UserInterface.display_marketing_firm_menu_options()
-            user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
-            if user_selection == 1:
-                self.create_sweepstakes()
-            elif user_selection == 2:
-                self.select_sweepstakes()
-            elif user_selection == 3:
-                self.change_marketing_firm_name()
-            else:
-                pass
+        UserInterface.display_marketing_firm_menu_options()
+        user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
+        if user_selection == 1:
+            MarketingFirm.create_sweepstakes("")
+        elif user_selection == 2:
+            self.select_sweepstakes()
+        elif user_selection == 3:
+            self.change_marketing_firm_name()
+        else:
+            pass
 

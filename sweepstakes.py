@@ -1,5 +1,5 @@
 from userinterface import UserInterface
-from contestant import Contestant
+
 
 class Sweepstakes:
     def __init__(self):
