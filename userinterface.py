@@ -1,6 +1,5 @@
 from marketingfirm import MarketingFirm
 from sweepstakes import Sweepstakes
-import marketingfirm
 
 
 
@@ -58,11 +57,11 @@ class UserInterface:
             pass
 
     @staticmethod
-    def display_sweepstakes_menu_options(sweepstakes):
+    def display_sweepstakes_menu_options():
         print("Enter -1- to register a contestant.")
         print("Enter -2- to pick a winner. ")
         print("Enter -3- to view contestant. ")
-        user_selection = int(input("Enter number here:"))
+        user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
         if user_selection == 1:
             Sweepstakes.register_contestant()
         elif user_selection == 2:
@@ -76,8 +75,8 @@ class UserInterface:
     def welcome_to_app():
         print("Welcome to the Sweepstakes App.")
         print("Enter -1- to open the marketing firm menu. ")
-        print("Enter -3- to open the sweepstakes menu. ")
-        user_selection = int(input("Enter number here:"))
+        print("Enter -2- to open the sweepstakes menu. ")
+        user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
         if user_selection == 1:
             UserInterface.display_marketing_firm_menu_options()
         elif user_selection == 2:

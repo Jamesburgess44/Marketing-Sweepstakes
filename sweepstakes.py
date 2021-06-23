@@ -1,6 +1,9 @@
+from userinterface import UserInterface
+from contestant import Contestant
+
 class Sweepstakes:
     def __init__(self, name):
-        pass
+        name = User
 
 
     def register_contestant(self, contestant):
