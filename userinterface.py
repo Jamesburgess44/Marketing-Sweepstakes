@@ -20,9 +20,12 @@ class UserInterface:
 
     @staticmethod
     def get_user_input_int(prompt):
-        user_input = int(input(prompt))
-        return user_input
-
+        try:
+            user_input = int(input(prompt))
+            return user_input
+        except ValueError:
+            print("please enter a number!")
+            return UserInterface.get_user_input_int(prompt)
 
     @staticmethod
     def display_contestant_info(contestant):
@@ -34,8 +37,11 @@ class UserInterface:
 
     @staticmethod
     def display_sweepstakes_selection_menu(all_sweepstakes):
-        pass
-
+        i = 1  # for displaying in terminal
+        print("Which sweepstake would you like to interact with?:")
+        for sweepstake in all_sweepstakes:
+            print(f"{i}: {sweepstake.name}")
+        
     @staticmethod
     def display_marketing_firm_menu_options():
         print("Enter -1- to create a sweepstakes.")
@@ -43,11 +49,11 @@ class UserInterface:
         print("Enter -3- to select a sweepstakes. ")
         user_selection = int(input("Enter number here:"))
         if user_selection == 1:
-            marketingfirm.MarketingFirm.create_sweepstakes()
+            MarketingFirm.create_sweepstakes()
         elif user_selection == 2:
-            marketingfirm.MarketingFirm.change_marketing_firm_name()
+            MarketingFirm.change_marketing_firm_name()
         elif user_selection == 3:
-            marketingfirm.MarketingFirm.select_sweepstakes()
+            MarketingFirm.select_sweepstakes()
         else:
             pass
 
