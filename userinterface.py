@@ -52,3 +52,4 @@ class UserInterface:
         print("Enter -2- to open the sweepstakes menu. ")
         print("Enter -3- to close the application.")
         return
+
