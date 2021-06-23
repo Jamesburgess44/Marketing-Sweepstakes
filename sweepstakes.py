@@ -17,7 +17,13 @@ class Sweepstakes:
         pass
 
     def menu(self):
-        """, I want the sweepstakes menu to provide a façade interface for viewing contestants, registering a new contestant,
-         picking a winner, and exiting the sweepstakes menu"""
         UserInterface.display_sweepstakes_menu_options()
-        pass
+        user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
+        if user_selection == 1:
+            Sweepstakes.register_contestant()
+        elif user_selection == 2:
+            Sweepstakes.pick_winner()
+        elif user_selection == 3:
+            Sweepstakes.view_contestant()
+        else:
+            pass

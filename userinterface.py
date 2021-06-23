@@ -1,9 +1,3 @@
-from marketingfirm import MarketingFirm
-from sweepstakes import Sweepstakes
-
-
-
-
 class UserInterface:
     """I want to create a user interface for any information the application would need
     to get or display for the user. One example would be to create a method called
@@ -46,40 +40,21 @@ class UserInterface:
         print("Enter -1- to create a sweepstakes.")
         print("Enter -2- to change the marketing firm name. ")
         print("Enter -3- to select a sweepstakes. ")
-        user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
-        if user_selection == 1:
-            MarketingFirm.create_sweepstakes()
-        elif user_selection == 2:
-            MarketingFirm.change_marketing_firm_name()
-        elif user_selection == 3:
-            MarketingFirm.select_sweepstakes()
-        else:
-            pass
+        print("Enter -4- to return to the main menu")
+        return
 
     @staticmethod
     def display_sweepstakes_menu_options():
         print("Enter -1- to register a contestant.")
         print("Enter -2- to pick a winner. ")
         print("Enter -3- to view contestant. ")
-        user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
-        if user_selection == 1:
-            Sweepstakes.register_contestant()
-        elif user_selection == 2:
-            Sweepstakes.pick_winner()
-        elif user_selection == 3:
-            Sweepstakes.view_contestant()
-        else:
-            pass
+        print("Enter -4- to return to the main menu")
+        return
 
     @staticmethod
     def welcome_to_app():
         print("Welcome to the Sweepstakes App.")
         print("Enter -1- to open the marketing firm menu. ")
         print("Enter -2- to open the sweepstakes menu. ")
-        user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
-        if user_selection == 1:
-            UserInterface.display_marketing_firm_menu_options()
-        elif user_selection == 2:
-            UserInterface.display_sweepstakes_menu_options()
-        else:
-            pass
+        print("Enter -3- to close the application.")
+        return

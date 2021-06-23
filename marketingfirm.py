@@ -1,4 +1,5 @@
 from userinterface import UserInterface
+from sweepstakes import Sweepstakes
 
 class MarketingFirm:
     def __init__(self):
@@ -13,10 +14,20 @@ class MarketingFirm:
         pass
 
     def change_marketing_firm_name(self):
+        self.name()
         pass
 
     def menu(self):
-        """I want the marketing firm menu to provide a façade interface for selecting a sweepstakes,
-        creating a sweepstakes, changing the marketing firm name, and exiting the application"""
-        UserInterface.display_marketing_firm_menu_options()
-        pass
+        will_this_work = True
+        while will_this_work:
+            UserInterface.display_marketing_firm_menu_options()
+            user_selection = UserInterface.get_user_input_int("Enter the number of your choice")
+            if user_selection == 1:
+                self.create_sweepstakes()
+            elif user_selection == 2:
+                self.select_sweepstakes()
+            elif user_selection == 3:
+                self.change_marketing_firm_name()
+            else:
+                pass
+
