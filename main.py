@@ -1,3 +1,3 @@
 from userinterface import UserInterface
 
-UserInterface.display_message()
+UserInterface.welcome_to_app()

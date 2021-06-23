@@ -74,4 +74,13 @@ class UserInterface:
 
     @staticmethod
     def welcome_to_app():
-        print("welcome")
+        print("Welcome to the Sweepstakes App.")
+        print("Enter -1- to open the marketing firm menu. ")
+        print("Enter -3- to open the sweepstakes menu. ")
+        user_selection = int(input("Enter number here:"))
+        if user_selection == 1:
+            UserInterface.display_marketing_firm_menu_options()
+        elif user_selection == 2:
+            UserInterface.display_sweepstakes_menu_options()
+        else:
+            pass
