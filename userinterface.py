@@ -37,11 +37,11 @@ class UserInterface:
 
     @staticmethod
     def display_sweepstakes_selection_menu(all_sweepstakes):
-        i = 1  # for displaying in terminal
+        i = 1 
         print("Which sweepstake would you like to interact with?:")
         for sweepstake in all_sweepstakes:
             print(f"{i}: {sweepstake.name}")
-        
+
     @staticmethod
     def display_marketing_firm_menu_options():
         print("Enter -1- to create a sweepstakes.")
